@@ -46,7 +46,7 @@ const Navbar = () => {
           </div>
 
           <div>
-            <button className="bg-[#24CDD5] text-white px-4 py-2 rounded-md hover:bg-[#3BB78F] transition-colors w-30 md:w-40 lg:w-44">
+            <button className="bg-[#24CDD5] text-white px-4 py-2 rounded-md hover:bg-[#3BB78F] transition-colors w-24 md:w-36 lg:w-40">
               Download CV
             </button>
           </div>
