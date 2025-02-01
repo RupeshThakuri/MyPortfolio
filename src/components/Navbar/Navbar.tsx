@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <nav className="fixed w-full bg-[#212529] z-50 box_border">
       <div className="max-w-7xl mx-auto p-2 sm:p-4 lg:p-6 ">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-around h-16">
           <div className="flex-shrink-0 md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -46,7 +46,7 @@ const Navbar = () => {
           </div>
 
           <div>
-            <button className="bg-[#24CDD5] text-white px-4 py-2 rounded-md hover:bg-[#3BB78F] transition-colors w-24 md:w-36 lg:w-40">
+            <button className="bg-[#24CDD5] text-white px-4 py-2 rounded-md hover:bg-[#3BB78F] transition-colors w-fit md:w-36 lg:w-40">
               Download CV
             </button>
           </div>
