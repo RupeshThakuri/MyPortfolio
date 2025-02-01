@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed w-full bg-[#212529] z-50 box_border">
-      <div className="max-w-7xl mx-auto p-2 sm:p-4 lg:p-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-around h-16">
           {/* Mobile Menu Toggle Button */}
           <div className="flex-shrink-0 md:hidden">
@@ -40,7 +40,13 @@ const Navbar = () => {
 
           {/* Logo */}
           <div className="flex items-center justify-center flex-1 md:flex-none">
-            <Image src="/Images/Logo/whitelogo.png" alt="Logo" width={100} height={100} />
+            <Image
+              src="/Images/Logo/whitelogo.png"
+              alt="Logo"
+              width={100}
+              height={100}
+              className="w-auto h-auto max-w-full"
+            />
           </div>
 
           {/* Download CV Button (Visible on Medium and Larger Devices) */}
@@ -57,7 +63,7 @@ const Navbar = () => {
         initial={{ height: 0, opacity: 0 }}
         animate={{ height: isOpen ? "auto" : 0, opacity: isOpen ? 1 : 0 }}
         transition={{ duration: 0.3 }}
-        className="md:hidden overflow-hidden bg-[#212529]"
+        className="md:hidden overflow-hidden bg-[#212529] w-full"
       >
         <div className="px-4 pt-2 pb-4 space-y-2">
           {/* Mobile Menu Items */}
@@ -72,7 +78,7 @@ const Navbar = () => {
             </Link>
           ))}
 
-          {/* Download CV Button (Visible in Mobile Menu) */}
+          {/* Download CV Button */}
           <div className="px-3">
             <button className="bg-[#24CDD5] text-white px-4 py-2 rounded-md hover:bg-[#3BB78F] transition-colors w-full">
               Download CV

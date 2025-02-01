@@ -37,36 +37,54 @@ function Skills() {
   const icons = [
     {
       id: 1,
-      icon: "/Images/Logo/whitelogo.png"
+      name: "Python",
+      iconSrc: "/Images/Skills/python.png"
     },
     {
       id: 2,
-      icon: "/Images/Logo/whitelogo.png"
+      name: "Express JS",
+      iconSrc: "/Images/Skills/expressjs_dark.png"
     },
     {
       id: 3,
-      icon: "/Images/Logo/whitelogo.png"
+      name: "Java",
+      iconSrc: "/Images/Skills/java.png"
     },
     {
       id: 4,
-      icon: "/Images/Logo/whitelogo.png"
+      name: "Mongo DB",
+      iconSrc: "/Images/Skills/mongodb.png"
     },
     {
       id: 5,
-      icon: "/Images/Logo/whitelogo.png"
+      name: "Laravel",
+      iconSrc: "/Images/Skills/laravel.png"
     },
     {
       id: 6,
-      icon: "/Images/Logo/whitelogo.png"
+      name: "MySQL",
+      iconSrc: "/Images/Skills/mysql.png"
     },
     {
       id: 7,
-      icon: "/Images/Logo/whitelogo.png"
+      name: "Git",
+      iconSrc: "/Images/Skills/github-dark.png"
     },
     {
       id: 8,
-      icon: "/Images/Logo/whitelogo.png"
+      name: "C#",
+      iconSrc: "/Images/Skills/csharp.png"
     },
+    {
+      id: 9,
+      name: "React JS",
+      iconSrc: "/Images/Skills/react_light.png"
+    },
+    {
+      id: 8,
+      name: "Node JS",
+      iconSrc: "/Images/Skills/nodejs.png"
+    }
   ]
 
   return (
@@ -79,60 +97,17 @@ function Skills() {
             {/* <!-- Slides --> */}
             <div data-glide-el="track">
               <ul className="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0">
-                <li>
-                  <Image
-                    src="/Images/Logo/whitelogo.png"
-                    className="m-auto h-20 max-h-full w-auto max-w-full"
-                    alt='GlideImg'
-                    width={100}
-                    height={100}
-                  />
-                </li>
-                <li>
-                  <Image
-                    src="/Images/Logo/whitelogo.png"
-                    className="m-auto h-20 max-h-full w-auto max-w-full"
-                    alt='GlideImg'
-                    width={100}
-                    height={100}
-                  />
-                </li>
-                <li>
-                  <Image
-                    src="/Images/Logo/whitelogo.png"
-                    alt='GlideImg'
-                    width={100}
-                    height={100}
-                    className="m-auto h-20 max-h-full w-auto max-w-full"
-                  />
-                </li>
-                <li>
-                  <Image
-                    src="/Images/Logo/whitelogo.png"
-                    alt='GlideImg'
-                    width={100}
-                    height={100}
-                    className="m-auto h-20 max-h-full w-auto max-w-full"
-                  />
-                </li>
-                <li>
-                  <Image
-                    src="/Images/Logo/whitelogo.png"
-                    alt='GlideImg'
-                    width={100}
-                    height={100}
-                    className="m-auto h-20 max-h-full w-auto max-w-full"
-                  />
-                </li>
-                <li>
-                  <Image
-                    src="/Images/Logo/whitelogo.png"
-                    alt='GlideImg'
-                    width={100}
-                    height={100}
-                    className="m-auto h-20 max-h-full w-auto max-w-full"
-                  />
-                </li>
+                {icons.map((icon) => (
+                  <li>
+                    <Image
+                      src={icon.iconSrc}
+                      className="m-auto h-20 max-h-full w-auto max-w-full"
+                      alt={icon.name}
+                      width={100}
+                      height={100}
+                    />
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
