@@ -44,7 +44,7 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg text-gray-300 max-w-4xl mx-auto text-center"
           >
-            Hey its me Rupesh Thakuri currently of 22 years young. With the growing world of technology I love playing
+            Hey its me Rupesh Thakuri currently of 24 years young. With the growing world of technology I love playing
             with computers which makes me to study BScCSIT which is related to science and information technology. I m
             surely a lazy guy but until I do something that I like. I enjoy playing football, listening music, watching
             dance and playing other sports.
@@ -79,16 +79,16 @@ export default function About() {
             </div>
             <div className="space-y-6">
               <div>
-                <h4 className="text-xl font-medium">{`Bachelor's in Computer Science`}</h4>
-                <p className="text-gray-400">University of Technology</p>
-                <p className="text-sm text-gray-500">2018 - 2022</p>
-                <p className="text-gray-300 mt-2">Focused on software engineering and web development</p>
+                <h4 className="text-xl font-medium">{`Bachelor's in Science Computer Science and Information Technology`}</h4>
+                <p className="text-gray-400">Tribhuwan University</p>
+                <p className="text-sm text-gray-500">2020 - 2024</p>
+                <p className="text-gray-300 mt-2">Focused on software engineering and web development with sound knowledge of data structures and algorithms and OOP</p>
               </div>
               <div>
-                <h4 className="text-xl font-medium">High School Diploma</h4>
-                <p className="text-gray-400">Tech High School</p>
-                <p className="text-sm text-gray-500">2016 - 2018</p>
-                <p className="text-gray-300 mt-2">Computer Science major with programming fundamentals</p>
+                <h4 className="text-xl font-medium">High School In Science</h4>
+                <p className="text-gray-400">Himalayan International Model School</p>
+                <p className="text-sm text-gray-500">2017 - 2019</p>
+                <p className="text-gray-300 mt-2">{`Sound information of physics, chemistry and mathematics. What most intrest me was Computer and it's evolution in the future`}</p>
               </div>
             </div>
           </motion.div>

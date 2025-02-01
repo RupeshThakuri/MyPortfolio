@@ -59,13 +59,13 @@ const Navbar = () => {
         transition={{ duration: 0.3 }}
         className="md:hidden overflow-hidden bg-[#212529]"
       >
-        <div className="px-2 pt-2 pb-3 space-y-1">
+        <div className="px-4 pt-2 pb-4 space-y-2">
           {/* Mobile Menu Items */}
           {menuItems.map((item) => (
             <Link
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="block text-white hover:text-gray-300 px-3 py-2"
+              className="block text-white hover:text-gray-300 px-3 py-2 rounded-md transition-colors"
               onClick={() => setIsOpen(false)}
             >
               {item}
@@ -73,7 +73,7 @@ const Navbar = () => {
           ))}
 
           {/* Download CV Button (Visible in Mobile Menu) */}
-          <div className="px-3 py-2">
+          <div className="px-3">
             <button className="bg-[#24CDD5] text-white px-4 py-2 rounded-md hover:bg-[#3BB78F] transition-colors w-full">
               Download CV
             </button>

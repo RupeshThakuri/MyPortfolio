@@ -9,15 +9,15 @@ export default function Experience() {
       company: "eDIT Enterprises",
       role: "Full Stack Developer Intern",
       period: "Jan 2023 - Jun 2023",
-      description: "Developed and maintained web applications using React and Node.js. Worked on database optimization and API development.",
-      technologies: ["React", "Node.js", "MongoDB"]
+      description: "Developed and maintained web applications using React and Next.js. Worked on database optimization and API development.",
+      technologies: ["React", "Python", "MySQL", "APIs","TypeScript"]
     },
     {
       company: "OM X Enterprise",
       role: "Web Development Intern",
       period: "Jul 2023 - Dec 2023",
-      description: "Created responsive interfaces and implemented new features using TypeScript and Next.js. Collaborated with the backend team on API integration.",
-      technologies: ["TypeScript", "Next.js", "PostgreSQL"]
+      description: "Created responsive interfaces and implemented new features using TypeScript and Next.js. Collaborated with the backend team for implementation of Dashboard using Laravel.",
+      technologies: ["TypeScript", "Next.js", "PostgreSQL","Laravel"]
     }
   ]
 

@@ -1,9 +1,10 @@
 'use client'
 
 import { motion } from "framer-motion";
-import { Mail, Phone, Facebook, Instagram, Linkedin } from 'lucide-react'
-import Link from "next/link"
-import Image from "next/image"
+import { Mail, Phone, Facebook, Instagram, Linkedin } from 'lucide-react';
+import { TypeAnimation } from "react-type-animation"
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -37,7 +38,27 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.4 }}
               className="text-2xl sm:text-3xl text-emerald-400"
             >
-              Front End web Developer
+              <div className="h-[60px] text-xl text-emerald-400 sm:text-2xl md:text-3xl">
+                I am a {""}
+                <TypeAnimation
+                  sequence={[
+                    "Front End Developer",
+                    2000,
+                    "Backend Developer",
+                    2000,
+                    "SEO Specialist",
+                    2000,
+                    "Programmer",
+                    2000,
+                    "DSA Expert",
+                    2000,
+                    "Network Engineer",
+                    2000,
+                  ]}
+                  repeat={Number.POSITIVE_INFINITY}
+                  cursor={true}
+                />
+              </div>
             </motion.p>
 
             <motion.div

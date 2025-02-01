@@ -33,6 +33,42 @@ function Skills() {
     }
   }, [])
 
+  //icons for programming languages
+  const icons = [
+    {
+      id: 1,
+      icon: "/Images/Logo/whitelogo.png"
+    },
+    {
+      id: 2,
+      icon: "/Images/Logo/whitelogo.png"
+    },
+    {
+      id: 3,
+      icon: "/Images/Logo/whitelogo.png"
+    },
+    {
+      id: 4,
+      icon: "/Images/Logo/whitelogo.png"
+    },
+    {
+      id: 5,
+      icon: "/Images/Logo/whitelogo.png"
+    },
+    {
+      id: 6,
+      icon: "/Images/Logo/whitelogo.png"
+    },
+    {
+      id: 7,
+      icon: "/Images/Logo/whitelogo.png"
+    },
+    {
+      id: 8,
+      icon: "/Images/Logo/whitelogo.png"
+    },
+  ]
+
   return (
     <>
       <section id="skills">
