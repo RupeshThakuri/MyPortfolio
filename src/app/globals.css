@@ -3,14 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #282626;
+  --foreground: hwb(194 29% 7%);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #282626;
+    --foreground: hwb(200 91% 8%);
+    --beautiful: #24CDD5;
   }
 }
 
@@ -18,4 +19,24 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* for bording the div */
+.box_border{
+  border-bottom: 4px solid rgba(0, 0, 0, 0.17);
+}
+
+.img_border{
+  border: 20px solid rgba(0, 0, 0, 0.17);
+}
+
+/* for border bottom to links */
+.links_border{
+  border-bottom: 1px solid var(--foreground);
+}
+
+.links_border:hover{
+  border-bottom: none;
+  color: var(--beautiful);
 }
