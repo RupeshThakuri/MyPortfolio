@@ -46,7 +46,7 @@ export default function Projects() {
         className="space-y-8"
       >
         <h2 className="text-center text-3xl font-bold sm:text-4xl">Featured Projects</h2>
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 mx-10">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}

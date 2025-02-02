@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <div className="min-h-screen bg-zinc-900 text-white relative overflow-hidden pt-4 sm:pt-6 lg:pt-8">
+    <div className="min-h-screen bg-zinc-900 text-white relative overflow-hidden pt-4 sm:pt-6 lg:pt-8 px-4 md:px-0 lg:px-0">
       <div className="max-w-7xl mx-auto pt-20 pb-16 sm:pt-24 sm:pb-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center pt-12 md:pt-16 lg:pt-20 ">
           {/* Left Content */}

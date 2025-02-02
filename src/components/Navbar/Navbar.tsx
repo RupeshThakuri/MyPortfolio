@@ -12,7 +12,7 @@ const Navbar = () => {
   const menuItems = ["Home", "About", "Experiences", "Projects", "Skills", "Contact"];
 
   return (
-    <nav className="fixed w-full bg-[#212529] z-50 box_border">
+    <nav className="fixed w-full bg-[#212529] z-50 box_border py-6 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-around h-16">
           {/* Mobile Menu Toggle Button */}
@@ -51,7 +51,7 @@ const Navbar = () => {
 
           {/* Download CV Button (Visible on Medium and Larger Devices) */}
           <div className="hidden md:block">
-            <button className="bg-[#24CDD5] text-white px-4 py-2 rounded-md hover:bg-[#3BB78F] transition-colors w-fit md:w-36 lg:w-40">
+            <button className="bg-[#24CDD5] text-white py-2 rounded-md hover:bg-[#3BB78F] transition-colors w-28 md:w-36 lg:w-40">
               Download CV
             </button>
           </div>

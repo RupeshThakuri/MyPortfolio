@@ -48,7 +48,7 @@ function Skills() {
     {
       id: 3,
       name: "Java",
-      iconSrc: "/Images/Skills/java.png"
+      iconSrc: "/Images/Skiils/java.png"
     },
     {
       id: 4,

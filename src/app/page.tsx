@@ -12,12 +12,14 @@ import Contact from "@/components/Contact/Contact"
 export default function Home() {
   return (
     <>
-      <Hero/>
-      <About/>
-      <Experience/>
-      <Projects/>
-      <Skills/>
-      <Contact/>
+      <div className='pages overflow-hidden'>
+        <Hero />
+        <About />
+        <Experience />
+        <Projects />
+        <Skills />
+        <Contact />
+      </div>
     </>
   );
 }
