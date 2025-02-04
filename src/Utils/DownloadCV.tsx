@@ -11,7 +11,7 @@ function DownloadCV() {
 
   return (
     <>
-      <button className="bg-[#24CDD5] text-white py-2 rounded-md hover:bg-[#3BB78F] transition-colors w-28 md:w-36 lg:w-40" onClick={() => downloadCV()}>
+      <button className="bg-[#24CDD5] text-white py-2 rounded-md hover:bg-[#3BB78F] transition-colors w-32 md:w-40 lg:w-48" onClick={() => downloadCV()}>
         Download CV
       </button>
     </>
