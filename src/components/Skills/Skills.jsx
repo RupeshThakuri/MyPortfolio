@@ -38,12 +38,12 @@ function Skills() {
     {
       id: 1,
       name: "Python",
-      iconSrc: "/Images/Skills/python.png"
+      iconSrc: "/Images/Skiils/python.png"
     },
     {
       id: 2,
       name: "Express JS",
-      iconSrc: "/Images/Skills/expressjs_dark.png"
+      iconSrc: "/Images/Skiils/expressjs_dark.png"
     },
     {
       id: 3,
@@ -53,37 +53,37 @@ function Skills() {
     {
       id: 4,
       name: "Mongo DB",
-      iconSrc: "/Images/Skills/mongodb.png"
+      iconSrc: "/Images/Skiils/mongodb.png"
     },
     {
       id: 5,
       name: "Laravel",
-      iconSrc: "/Images/Skills/laravel.png"
+      iconSrc: "/Images/Skiils/laravel.png"
     },
     {
       id: 6,
       name: "MySQL",
-      iconSrc: "/Images/Skills/mysql.png"
+      iconSrc: "/Images/Skiils/mysql.png"
     },
     {
       id: 7,
       name: "Git",
-      iconSrc: "/Images/Skills/github-dark.png"
+      iconSrc: "/Images/Skiils/github-dark.png"
     },
     {
       id: 8,
       name: "C#",
-      iconSrc: "/Images/Skills/csharp.png"
+      iconSrc: "/Images/Skiils/csharp.png"
     },
     {
       id: 9,
       name: "React JS",
-      iconSrc: "/Images/Skills/react_light.png"
+      iconSrc: "/Images/Skiils/react_light.png"
     },
     {
       id: 8,
       name: "Node JS",
-      iconSrc: "/Images/Skills/nodejs.png"
+      iconSrc: "/Images/Skiils/nodejs.png"
     }
   ]
 

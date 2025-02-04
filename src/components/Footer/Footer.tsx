@@ -1,6 +1,11 @@
+"use client"
+
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+
+//components
+import DownloadCV from "@/Utils/DownloadCV"
 
 export default function Footer() {
   return (
@@ -50,9 +55,7 @@ export default function Footer() {
             </div>
 
             {/* Download CV Button */}
-            <button className="bg-[#24CDD5] text-white px-4 py-2 rounded-md hover:bg-[#3BB78F] transition-colors w-24 md:w-36 lg:w-40">
-              Download CV
-            </button>
+            <DownloadCV />
           </div>
         </div>
       </div>

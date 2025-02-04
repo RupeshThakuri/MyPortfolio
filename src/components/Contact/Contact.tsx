@@ -49,20 +49,20 @@ export default function Contact() {
             <div className="space-y-6">
               <div className="flex items-center space-x-4">
                 <Mail className="w-6 h-6 text-[#24cdd5]" />
-                <p className="text-gray-600 dark:text-gray-300">your.email@example.com</p>
+                <p className="text-gray-600 dark:text-gray-300">rupeshthakuri16@gmail.com</p>
               </div>
               <div className="flex items-center space-x-4">
                 <Phone className="w-6 h-6 text-[#24cdd5]" />
-                <p className="text-gray-600 dark:text-gray-300">+1 234 567 890</p>
+                <p className="text-gray-600 dark:text-gray-300">+977 9818631886</p>
               </div>
               <div className="flex items-center space-x-4">
                 <MapPin className="w-6 h-6 text-[#24cdd5]" />
-                <p className="text-gray-600 dark:text-gray-300">Your Location, City, Country</p>
+                <p className="text-gray-600 dark:text-gray-300">Boudha-Arubaru, Kathmandu, Nepal</p>
               </div>
             </div>
             <div className="h-[300px] rounded-lg overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.119763931327!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1696361605498!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d882.8859722046445!2d85.37045678762117!3d27.731365664860892!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1bea173055c7%3A0x1b5e27ed5888d2b1!2sKathmandu%2044600!5e0!3m2!1sen!2snp!4v1738664130986!5m2!1sen!2snp"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

@@ -1,115 +1,89 @@
-"use client"
-
-import { useParams } from "next/navigation"
-import { motion } from "framer-motion"
 import Image from "next/image"
-import { Github, Globe } from "lucide-react"
 import Link from "next/link"
+import { ArrowLeft, Globe, Code, CheckCircle } from "lucide-react"
+import {projects} from "@/components/Projects/Projects"
+import { notFound } from "next/navigation"
 
-// This would typically come from a database or API
-const projects = [
-  {
-    id: "project-1",
-    title: "Project 1",
-    description: "A comprehensive description of Project 1.",
-    image: "/placeholder.svg",
-    tags: ["React", "Next.js", "Tailwind"],
-    github: "#",
-    demo: "#",
-    details: [
-      "Implemented responsive design using Tailwind CSS",
-      "Utilized Next.js for server-side rendering and improved SEO",
-      "Integrated with a RESTful API for dynamic data fetching",
-      "Implemented user authentication and authorization",
-    ],
-    screenshots: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
-  },
-  {
-    id: "project-2",
-    title: "Project 2",
-    description: "A comprehensive description of Project 2.",
-    image: "/placeholder.svg",
-    tags: ["Node.js", "Express", "MongoDB"],
-    github: "#",
-    demo: "#",
-    details: [
-      "Developed a RESTful API using Node.js and Express",
-      "Implemented database operations with MongoDB and Mongoose",
-      "Created user authentication system with JWT",
-      "Deployed the application on Heroku",
-    ],
-    screenshots: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
-  },
-  {
-    id: "project-3",
-    title: "Project 3",
-    description: "A comprehensive description of Project 3.",
-    image: "/placeholder.svg",
-    tags: ["React", "Firebase", "Tailwind"],
-    github: "#",
-    demo: "#",
-    details: [
-      "Built a real-time application using React and Firebase",
-      "Implemented user authentication with Firebase Auth",
-      "Utilized Firestore for real-time database operations",
-      "Designed responsive UI with Tailwind CSS",
-    ],
-    screenshots: ["/placeholder.svg", "/placeholder.svg", "/placeholder.svg"],
-  },
-]
-
-export default function ProjectPage() {
-  const params = useParams()
+export default function ProjectPage({ params }: { params: { id: string } }) {
   const project = projects.find((p) => p.id === params.id)
 
   if (!project) {
-    return <div className="container py-24">Project not found</div>
+    notFound()
   }
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.5 }}
-      className="container py-24"
-    >
-      <Link href="/#projects" className="text-[#212529] hover:underline mb-4 inline-block">
-        &larr; Back to Projects
-      </Link>
-      <div className="space-y-8">
-        <div className="relative aspect-video w-full overflow-hidden rounded-lg">
-          <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
+    <div className="min-h-screen bg-gray-100 dark:bg-gray-900 pt-24 pb-12">
+      <div className="container mx-auto px-4 py-12">
+        {/* Back Button */}
+        <Link href="/" className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline mb-8">
+          <ArrowLeft className="w-4 h-4 mr-2" />
+          Back to Projects
+        </Link>
+
+        {/* Hero Section */}
+        <div className="bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-xl mb-12">
+          <div className="relative h-64 md:h-96">
+            <Image src={project.image || "/placeholder.svg"} alt={project.title} fill className="object-cover" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+            <h1 className="absolute bottom-6 left-6 text-4xl font-bold text-white">{project.title}</h1>
+          </div>
+          <div className="p-6 md:p-8">
+            <p className="text-gray-600 dark:text-gray-300 mb-6">{project.fullDescription}</p>
+            <div className="flex flex-wrap gap-2 mb-8">
+              {project.technologies.map((tech, index) => (
+                <span
+                  key={index}
+                  className="px-3 py-1 rounded-full text-sm font-medium bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200"
+                >
+                  {tech.name}
+                </span>
+              ))}
+            </div>
+            <div className="flex gap-4">
+              <a
+                href={project.codeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-blue-600 text-white hover:bg-blue-700 transition-colors"
+              >
+                <Code className="w-4 h-4" />
+                View Code
+              </a>
+              <a
+                href={project.demoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-green-600 text-white hover:bg-green-700 transition-colors"
+              >
+                <Globe className="w-4 h-4" />
+                Live Demo
+              </a>
+            </div>
+          </div>
         </div>
-        <div>
-          <h1 className="text-4xl font-bold text-[#212529]">{project.title}</h1>
-          <p className="mt-2 text-xl text-gray-600 dark:text-gray-400">{project.description}</p>
-        </div>
-        <div className="flex flex-wrap gap-2">
-          {project.tags.map((tag) => (
-            <span
-              key={tag}
-              className="rounded-full bg-[#212529]/10 px-3 py-1 text-sm text-[#212529] dark:bg-gray-700 dark:text-gray-300"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-        <div className="space-y-4">
-          <h2 className="text-2xl font-semibold text-[#212529]">Project Details</h2>
-          <ul className="list-inside list-disc space-y-2">
-            {project.details.map((detail, index) => (
-              <li key={index}>{detail}</li>
+
+        {/* Features Section */}
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 md:p-8 mb-12">
+          <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">Key Features</h2>
+          <ul className="grid md:grid-cols-2 gap-4">
+            {project.features.map((feature, index) => (
+              <li key={index} className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
+                <CheckCircle className="w-5 h-5 text-green-500" />
+                {feature}
+              </li>
             ))}
           </ul>
         </div>
-        <div className="space-y-4">
-          <h2 className="text-2xl font-semibold text-[#212529]">Screenshots</h2>
-          <div className="grid gap-4 md:grid-cols-3">
+
+        {/* Screenshots Section */}
+        <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 md:p-8">
+          <h2 className="text-2xl font-bold text-gray-800 dark:text-white mb-6">Screenshots</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {project.screenshots.map((screenshot, index) => (
-              <div key={index} className="relative aspect-video overflow-hidden rounded-lg">
+              <div key={index} className="relative aspect-video rounded-lg overflow-hidden shadow-md">
                 <Image
                   src={screenshot || "/placeholder.svg"}
-                  alt={`Screenshot ${index + 1}`}
+                  alt={`${project.title} screenshot ${index + 1}`}
                   fill
                   className="object-cover"
                 />
@@ -117,28 +91,8 @@ export default function ProjectPage() {
             ))}
           </div>
         </div>
-        <div className="flex gap-4">
-          <a
-            href={project.demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center rounded-lg bg-[#212529] px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-[#212529]/90 focus:outline-none focus:ring-4 focus:ring-[#212529]/50 dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
-          >
-            <Globe className="mr-2 h-4 w-4" />
-            Live Demo
-          </a>
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center rounded-lg border border-[#212529] px-5 py-2.5 text-center text-sm font-medium text-[#212529] hover:bg-[#212529] hover:text-white focus:outline-none focus:ring-4 focus:ring-[#212529]/50 dark:border-gray-600 dark:text-gray-400 dark:hover:bg-gray-600 dark:hover:text-white dark:focus:ring-gray-800"
-          >
-            <Github className="mr-2 h-4 w-4" />
-            View Code
-          </a>
-        </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 

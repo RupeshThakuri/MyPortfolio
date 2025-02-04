@@ -6,6 +6,10 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
+
+//component
+import DownloadCV from "@/Utils/DownloadCV";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -51,9 +55,7 @@ const Navbar = () => {
 
           {/* Download CV Button (Visible on Medium and Larger Devices) */}
           <div className="hidden md:block">
-            <button className="bg-[#24CDD5] text-white py-2 rounded-md hover:bg-[#3BB78F] transition-colors w-28 md:w-36 lg:w-40">
-              Download CV
-            </button>
+            <DownloadCV />
           </div>
         </div>
       </div>
