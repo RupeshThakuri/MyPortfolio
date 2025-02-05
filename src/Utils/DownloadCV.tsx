@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 function DownloadCV() {
   //download cv
@@ -11,7 +11,13 @@ function DownloadCV() {
 
   return (
     <>
-      <button className="bg-[#24CDD5] text-white py-2 rounded-md hover:bg-[#3BB78F] transition-colors w-32 md:w-40 lg:w-48" onClick={() => downloadCV()}>
+      <button
+        onClick={(e) => {
+          e.preventDefault()
+          downloadCV()
+        }}
+        className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-emerald-400 text-white hover:bg-emerald-600 transition-colors"
+      >
         Download CV
       </button>
     </>
