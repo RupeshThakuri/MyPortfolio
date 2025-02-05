@@ -4,7 +4,7 @@ import ProjectDetail from './ProjectDetail';
 
 export const projects = [
   {
-    id: "ai-task-manager",
+    id: 1,
     title: "AI-Powered Task Management",
     description: "An intelligent task management system that uses AI to prioritize and optimize your workflow.",
     image: "/Images/Profile/profile.jpg",
@@ -41,7 +41,7 @@ export const projects = [
     ],
   },
   {
-    id: "eco-smart-home",
+    id: 2,
     title: "Eco-Smart Home System",
     description: "A comprehensive smart home solution focused on energy efficiency and sustainability.",
     image: "/Images/Profile/profile.jpg",
@@ -78,7 +78,7 @@ export const projects = [
     ],
   },
   {
-    id: "ar-language-learning",
+    id: 3,
     title: "AR Language Learning App",
     description: "An augmented reality app that makes language learning immersive and interactive.",
     image: "/Images/Profile/profile.jpg",
@@ -109,7 +109,7 @@ export const projects = [
     ],
   },
   {
-    id: "blockchain-supply-chain",
+    id: 4,
     title: "Blockchain Supply Chain",
     description: "A blockchain-based solution for transparent and efficient supply chain management.",
     image: "/Images/Profile/profile.jpg",

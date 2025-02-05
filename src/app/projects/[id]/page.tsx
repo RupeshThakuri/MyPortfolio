@@ -1,14 +1,19 @@
-import Image from "next/image"
-import Link from "next/link"
-import { ArrowLeft, Globe, Code, CheckCircle } from "lucide-react"
-import {projects} from "@/components/Projects/Projects"
-import { notFound } from "next/navigation"
+import Image from "next/image";
+import Link from "next/link";
+import { ArrowLeft, Globe, Code, CheckCircle } from "lucide-react";
+import { projects } from "@/components/Projects/Projects";
+import { notFound } from "next/navigation";
 
 export default function ProjectPage({ params }: { params: { id: string } }) {
-  const project = projects.find((p) => p.id === params.id)
+  // Convert params.id to a number
+  const projectId = parseInt(params.id, 10);
 
+  // Find the project with the matching ID
+  const project = projects.find((p) => p.id === projectId);
+
+  // If the project is not found, show the 404 page
   if (!project) {
-    notFound()
+    notFound();
   }
 
   return (
@@ -93,6 +98,5 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
         </div>
       </div>
     </div>
-  )
+  );
 }
-
