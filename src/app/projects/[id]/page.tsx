@@ -1,12 +1,18 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Globe, Code, CheckCircle } from "lucide-react";
 import { projects } from "@/components/Projects/Projects";
 import { notFound } from "next/navigation";
 
-export default function ProjectPage({ params }: { params: { id: string } }) {
-  // Convert params.id to a number
-  const projectId = parseInt(params.id, 10);
+export default function ProjectPage() {
+  const pathname = usePathname();
+
+  // Extract the project ID from the pathname
+  const segments = pathname.split("/");
+  const projectId = parseInt(segments[segments.length - 1], 10);
 
   // Find the project with the matching ID
   const project = projects.find((p) => p.id === projectId);
